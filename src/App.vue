@@ -1,8 +1,11 @@
 <template>
   <div id="app">{{msg}}</div>
+  <Todos v-bind:todos="todos" />
 </template>
 
 <script>
+import Todos from "./components/Todos";
+
 export default {
   name: "app",
   components: {},
