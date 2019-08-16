@@ -9,7 +9,7 @@
 <script>
 import Header from "./components/layout/Header";
 import Todos from "./components/Todos";
-import Todos from "./components/AddTodo";
+import AddTodo from "./components/AddTodo";
 
 export default {
   name: "app",
