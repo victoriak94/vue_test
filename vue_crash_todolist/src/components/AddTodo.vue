@@ -8,24 +8,26 @@
 </template>
 
 <script>
-import uuid from 'uuid';
+import uuid from "uuid";
 export default {
-  name: "AddTodo"
+  name: "AddTodo",
   data() {
-      return {
-          title: ''
-      }
+    return {
+      title: ""
+    };
   },
   methods: {
-      addTodo() {
-          const newTodo ={
-              id: uuid.v4(),
-              title: this.title,
-              completed: false
-          }
-        // Send up to parent by emitting an event
-        this.$emit('add-todo', newTodo);
-      }
+    addTodo(e) {
+      e.preventDefault();
+      const newTodo = {
+        id: uuid.v4(),
+        title: this.title,
+        completed: false
+      };
+      // Send up to parent by emitting an event
+      this.$emit("add-todo", newTodo);
+      this.title = "";
+    }
   }
 };
 </script>
