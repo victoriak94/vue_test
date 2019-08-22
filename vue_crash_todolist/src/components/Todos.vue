@@ -11,7 +11,7 @@ import TodoItem from "./TodoItem.vue";
 
 export default {
   name: "Todos",
-  copmonents: {
+  components: {
     TodoItem
   },
   props: ["todos"]
